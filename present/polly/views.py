@@ -7,7 +7,7 @@ def index(request):
     
     <html>
     <head>
-    <title>Hello world!</title>
+    <title>Polly</title>
     </head>
     <body>
     <h1>Hello world!</h1>
