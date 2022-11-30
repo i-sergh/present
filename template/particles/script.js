@@ -56,21 +56,21 @@ class Particle {
         if (this.blast){
             forceDirectionX = -forceDirectionX;
             forceDirectionY = -forceDirectionY;
-            if (distance > 50 && this.ticks_blast > 10){
+            if (distance > 50 && this.ticks_blast > 100){
                 this.blast = false;
                 this.ticks_blast = 0;
             }
         }
         else{
             if (distance < 10 && this.ticks_blast > 10){
-                console.log('here');
+                
                 this.blast = true;
                 this.ticks_blast = 0;
             }
         }
         if (distance < 100){
-            this.x +=  forceDirectionX * 3;
-            this.y +=  forceDirectionY * 3;
+            this.x +=  forceDirectionX * 30/distance;
+            this.y +=  forceDirectionY * 30/distance;
         } else{
             this.size = 3;
         }

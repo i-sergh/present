@@ -19,7 +19,7 @@ class NewVisitorTest(unittest.TestCase):
         self.assertIn('Polly', self.browser.title)
         
         # Сразу же ему предлагается меню из возможных страниц к посещению
-        # ['Art galery', 'Posts', 'Contact', 'About']
+        # ['Art works', 'Posts', 'Contact', 'About']
         #menu = self.browser.find_element()
 
         self.fail('End Test!')

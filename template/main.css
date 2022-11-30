@@ -1,0 +1,53 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.menu-ul li .menu-button {
+    
+    transition: 1.2s;
+    
+    padding-left: 1.5rem;
+    padding-right: 1.5rem ;
+    
+}
+
+
+.menu-ul li:hover .menu-button {
+    background: linear-gradient(to right, rgba(0,255,255, 0), aqua) ;
+    padding-right: 0.2rem ;
+    margin-left: 3rem;
+    
+}
+
+
+
+.menu-ul li {
+    display: table-cell;
+    text-align: center;
+    line-height: 100px;
+    
+}
+
+
+.menu-ul li .menu-img-back {
+    position: absolute;
+    z-index: -1;
+    height: 100px;
+    overflow: hidden;
+    
+    
+}
+.menu-ul li .menu-img-back img{
+    height: 100%;
+    
+}
+
+.menu-button{
+    background-color: rgb(234, 238, 130);
+}
