@@ -1,0 +1,96 @@
+/*https://codepen.io/nathantaylor/pen/PJGqdE*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#slider{
+    background: rgb(43, 6, 33);
+    height: 320px;
+    width: 680px;
+    overflow: visible;
+    position: relative;
+}
+
+#mask{
+    overflow: hidden;
+    height: 320px;
+}
+
+#slider ul{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#slider li{
+    width: 680px;
+    height:320px;
+    position: absolute;
+    left: -300px;
+    list-style: none;
+    opacity: 0; z-index:-1;
+}
+
+
+#slider li.first-animation{
+    animation: cycle1 6s linear infinite;
+    animation-delay: -6s;
+}
+
+#slider li.second-animation{
+    animation: cycle2 6s linear infinite;
+    
+}
+
+/* #slider li.third-animation{
+    animation: cycle3 6s linear infinite;
+    animation-delay: 12s;
+}
+
+
+#slider li.fourth-animation{
+    animation: cycle4 6s linear infinite;
+    animation-delay: 18s;
+}  */
+
+
+
+@keyframes cycle1{
+    0% { left:-300px; opacity: 0; z-index:1;}
+    20% {left:0px; opacity: 1;}
+    60% {left:0px; opacity: 1;}
+    80% {left:300px; opacity: 0; z-index:0;}
+    100% {left:300px; opacity: 0; z-index:-1;}
+
+}
+
+@keyframes cycle2{
+    0% { left:-300px; opacity: 0; z-index:1;}
+    20% {left:0px; opacity: 1;}
+    60% {left:0px; opacity: 1;}
+    80% {left:300px; opacity: 0; z-index:0;}
+    100% {left:300px; opacity: 0; z-index:-1;}
+
+}
+@keyframes cycle3{
+    0% { left:-300px; opacity: 0; z-index:1;}
+    20% {left:0px; opacity: 1;}
+    60% {left:0px; opacity: 1;}
+    80% {left:300px; opacity: 0; z-index:0;}
+    100% {left:300px; opacity: 0; z-index:-1;}
+
+}
+@keyframes cycle4{
+    0% { left:-300px; opacity: 0; z-index:1;}
+    20% {left:0px; opacity: 1;}
+    60% {left:0px; opacity: 1;}
+    80% {left:300px; opacity: 0; z-index:0;}
+    100% {left:300px; opacity: 0; z-index:-1;}
+
+}
+
+
+
