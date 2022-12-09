@@ -1,0 +1,60 @@
+:root{
+    --time: 2.5s;
+    --e1: cubic-bezier(0.8, 0.00, 0.1, 1);
+    --e2: cubic-bezier(0.600, 0.040, 0.980, 0.335);
+    --er: linear;
+
+    --color: hsl(15, 75%, 40%);
+    --font: 'Abril Fatface', sans-serif;
+
+    --slides: 4;
+    --images:: url(https://unsplash.it/g/1500/2200?image=838) url(https://unsplash.it/g/1500/1000?image=1078) url(https://unsplash.it/g/1500/1000?image=1077)  url(https://unsplash.it/g/1500/1200?image=345);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body{
+    width:100vw;
+    height: 100vh;
+    overflow:hidden;
+}
+
+.untitled{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    @keyframes rotateHue {
+        0%{filter:hue-rotate(0deg);}
+        20%{filter:hue-rotate(0deg);}
+        25%{filter:hue-rotate(90deg);}
+        45%{filter:hue-rotate(90deg);}
+        50%{filter:hue-rotate(180deg);}
+        70%{filter:hue-rotate(180deg);}
+        75%{filter:hue-rotate(270deg);}
+        95%{filter:hue-rotate(270deg);}
+        100%{filter:hue-rotate(360deg);}
+    }
+    animation: rotateHue infinite calc(--time*--slides*2) linear;
+    animation-delay: calc(--time/4);
+    
+}
+
+.untitled__shutters{
+    position: absolute;
+    height: 150vmax;
+    width: 150vmax;
+    left: calc(50% - 75vmax);
+    top: calc(50% - 75vmax);
+    pointer-events: none;
+    z-index: 2;
+    @keyframes rotateFrame {
+        0%{transform: rotate(0deg);}
+        100%{transform: rotate(180deg);}
+    }
+    animation: rotateFrame calc(--time*4) --er infinite;
+}
