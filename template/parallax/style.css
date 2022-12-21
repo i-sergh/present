@@ -1,6 +1,12 @@
 
+/*
+https://habr.com/ru/company/skillbox/blog/442658/
+https://alvarotrigo.com/blog/how-to-create-a-parallax-effect-with-css-only/
+https://webdevtips.pro/css/parallax-bg/
+*/
+
 .site-header{
-    background-image: url("images/Digital.png");
+    /*background-image: url("images/Digital.png");*/
     background-position: bottom;
     background-size: cover;
     padding: 5rem;
@@ -8,7 +14,14 @@
     position: relative;
     z-index: -1;
 }
-
+.back-img{
+    position: relative;
+    display: flex;
+    transform-style: preserve-3d;
+    
+    transform: translateZ(10em);
+    
+}
 
 
 .site-title{
@@ -18,6 +31,7 @@
     font-weight: 900;
     text-transform: uppercase;
     position: fixed;
+    color: tomato;
     
     
 }
