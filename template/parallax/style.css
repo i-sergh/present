@@ -3,6 +3,7 @@
 https://habr.com/ru/company/skillbox/blog/442658/
 https://alvarotrigo.com/blog/how-to-create-a-parallax-effect-with-css-only/
 https://webdevtips.pro/css/parallax-bg/
+https://alvarotrigo.com/fullPage/extensions/parallax.html#3rdPage
 */
 
 .site-header{
@@ -19,7 +20,7 @@ https://webdevtips.pro/css/parallax-bg/
     display: flex;
     transform-style: preserve-3d;
     
-    transform: translateZ(10em);
+    transform: translateZ(-10px) scale(2.5);
     
 }
 
@@ -40,3 +41,9 @@ https://webdevtips.pro/css/parallax-bg/
     background-color: rgba(255,255, 0, 1);
     
 }
+
+main {
+    /*...Collapsed...*/
+    overflow-y: auto;
+    perspective: 2px; /* <-- This line */
+  }
